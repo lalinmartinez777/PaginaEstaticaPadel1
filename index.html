@@ -48,6 +48,10 @@
                   <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                 </li>
                 <li class="group pl-6">
+                  <span @click="triggerNavItem('#testimonials')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Testimonios</span>
+                  <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                </li>
+                <li class="group pl-6">
                   <span @click="triggerNavItem('#contact')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contacto</span>
                   <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
                 </li>
@@ -64,7 +68,7 @@
         <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
           <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
             <button class="absolute top-0 right-0 mt-4 mr-4" @click="mobileMenu = false">
-              <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+              <img src="/assets/img/padel3.jpeg" class="h-10 w-auto" alt="" />
             </button>
             <ul class="mt-8 flex flex-col">
               <li class="py-2">
@@ -74,6 +78,9 @@
                 <span @click="triggerMobileNavItem('#services')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Servicios</span>
               </li>
               <li class="py-2">
+                <span @click="triggerMobileNavItem('#testimonials')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Testimonios</span>
+              </li>
+              <li class="py-2">
                 <span @click="triggerMobileNavItem('#contact')" class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contacto</span>
               </li>
             </ul>
@@ -81,12 +88,12 @@
         </div>
 
         <!-- Hero Section -->
-        <div class="relative bg-cover bg-center bg-no-repeat py-8" style="background-image: url(/assets/img/bg-hero.jpg)">
+        <div class="relative bg-cover bg-center bg-no-repeat py-8" style="background-image: url(/assets/img/padel2.jpeg)">
           <div class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
           <div class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div class="flex flex-col items-center justify-center lg:flex-row">
               <div class="rounded-full border-8 border-primary shadow-xl">
-                <img src="/assets/img/blog-author.jpg" class="h-48 rounded-full sm:h-56" alt="author" />
+                <img src="/assets/img/padel.jpeg" class="h-48 rounded-full sm:h-56" alt="author" />
               </div>
               <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1 class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">¡Bienvenido a Padel Parque Chopin!</h1>
@@ -104,11 +111,11 @@
               <h4 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">El mejor lugar para disfrutar del pádel en Guadalajara</h4>
               <p class="pt-6 font-body leading-relaxed text-grey-20">
                 En Padel Parque Chopin, nos apasiona el pádel y nos dedicamos a ofrecer la mejor experiencia para jugadores de todas las edades y niveles. Nuestras canchas están
-                diseñadas para brindar la máxima comodidad y rendimiento, y nuestro equipo de instructores está aquí para ayudarte a mejorar tu juego.
+                diseñadas para brindar la máxima comodidad y rendimiento, y nuestro equipo de instructores está aquí para ayudarte a mejorar tu juego. Todas las personas que asisten a jugar Padel en nuestras instalaciones son personas altamente devotas al espiritu de juego y de competitividad del deporte. Ven y desarrolla tu disciplina gracias a este bello deporte
               </p>
             </div>
             <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
-              <img src="/assets/img/padel-court.jpg" alt="Padel Court" class="w-full rounded shadow" />
+              <img src="/assets/img/padel1.jpeg" alt="Padel Court" class="w-full rounded shadow" />
             </div>
           </div>
         </div>
@@ -133,6 +140,56 @@
                   Disfruta de nuestras canchas con horas gratis para jugar todos los fines de semana. ¡Trae a tus amigos y vive la experiencia del pádel!
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="bg-grey-50 py-16 md:py-20" id="testimonials">
+          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Testimonios</h2>
+          <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">Lo que nuestros clientes dicen</h3>
+          <div class="container grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
+            <div class="rounded border border-grey-200 p-6 shadow">
+              <p class="text-grey-20 text-lg">"¡Las clases de pádel aquí son fantásticas! Los entrenadores son muy profesionales y el ambiente es muy acogedor."</p>
+              <p class="mt-4 text-right font-header font-semibold uppercase text-primary">- Laura M.</p>
+            </div>
+            <div class="rounded border border-grey-200 p-6 shadow">
+              <p class="text-grey-20 text-lg">"Me encanta venir a jugar los fines de semana. Las horas gratis son una gran oportunidad para divertirse con amigos."</p>
+              <p class="mt-4 text-right font-header font-semibold uppercase text-primary">- Pedro G.</p>
+            </div>
+            <div class="rounded border border-grey-200 p-6 shadow">
+              <p class="text-grey-20 text-lg">"Un lugar excelente para todos los niveles de jugadores. ¡Muy recomendado!"</p>
+              <p class="mt-4 text-right font-header font-semibold uppercase text-primary">- Ana R.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="container py-16 md:py-20" id="gallery">
+          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Galería de Imágenes</h2>
+          <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">Descubre nuestro parque</h3>
+          <div class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
+            <img src="/assets/img/padel4.jpeg" alt="Imagen de la cancha" class="rounded shadow">
+            <img src="/assets/img/padel5.jpeg" alt="Entrenamiento en grupo" class="rounded shadow">
+            <img src="/assets/img/padel6.jpeg" alt="Vista aérea de la cancha" class="rounded shadow">
+          </div>
+        </div>
+
+        <!-- Schedule and Rates Section -->
+        <div class="bg-grey-50 py-16 md:py-20" id="schedule-rates">
+          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Horarios y Tarifas</h2>
+          <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">Conoce nuestros precios y disponibilidad</h3>
+          <div class="container grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-2">
+            <div class="rounded border border-grey-200 p-6 shadow">
+              <h4 class="font-header text-2xl font-semibold text-primary">Horarios</h4>
+              <p class="pt-4 text-grey-20">Lunes a Viernes: 8:00 AM - 10:00 PM</p>
+              <p class="pt-2 text-grey-20">Sábados y Domingos: 9:00 AM - 8:00 PM</p>
+            </div>
+            <div class="rounded border border-grey-200 p-6 shadow">
+              <h4 class="font-header text-2xl font-semibold text-primary">Tarifas</h4>
+              <p class="pt-4 text-grey-20">Renta de Cancha: $200 MXN/hora</p>
+              <p class="pt-2 text-grey-20">Clases Privadas: $400 MXN/hora</p>
+              <p class="pt-2 text-grey-20">Clases Grupales: $150 MXN/persona</p>
             </div>
           </div>
         </div>
@@ -179,6 +236,22 @@
               </div>
               <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">Parque Chopin, Guadalajara, Jalisco, México</p>
             </div>
+          </div>
+        </div>
+
+        <!-- Subscription Form Section -->
+        <div class="bg-primary py-16" id="subscribe">
+          <div class="container">
+            <h3 class="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl">
+              Mantente <span class="font-bold">actualizado</span> <br />
+              con nuestras noticias
+            </h3>
+            <form class="mt-6 flex flex-col justify-center sm:flex-row">
+              <input class="w-full rounded px-4 py-3 font-body text-black sm:w-2/5 sm:py-4 lg:w-1/3" type="text" id="email" placeholder="Ingresa tu correo electrónico" />
+              <button class="mt-2 rounded bg-yellow px-8 py-3 font-body text-base font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-white focus:border-transparent focus:outline-none focus:ring focus:ring-yellow sm:ml-2 sm:mt-0 sm:py-4 md:text-lg">
+                Suscribirse
+              </button>
+            </form>
           </div>
         </div>
       </div>
